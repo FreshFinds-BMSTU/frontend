@@ -1,6 +1,12 @@
 <template>
-  <div class="w-full h-full bg-neutral-800 absolute">
+  <div>
     <Header />
     <NuxtPage />
   </div>
 </template>
+
+<style>
+body {
+  background-color: #262626;
+}
+</style>
