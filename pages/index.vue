@@ -5,7 +5,8 @@ import { CircleCheckBig, Clock8, Salad, DiamondPercent } from 'lucide-vue-next';
 </script>
 
 <template>
-  <div class="flex flex-col items-center w-full py-20">
+  <div class="flex flex-col items-center w-full py-10 gap-8">
+      <h1 class="text-white text-5xl font-bold">Почему именно мы?</h1>
       <div class="flex w-3/4 h-fit gap-10">
         <div class="bg-neutral-700 w-full rounded-2xl items-center flex-col pt-10 px-5 pb-5 flex gap-4 h-fit">
           <Clock8 class="text-green-500 w-3/6 h-3/6"/>
