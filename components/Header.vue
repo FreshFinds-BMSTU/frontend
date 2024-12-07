@@ -10,22 +10,22 @@ const secondDropDownOpen = ref(false);
   <div class="h-16 px-5 py-2.5 bg-[#151517] flex items-center justify-between text-white relative">
     <div class="absolute left-5 gap-8 hidden md:flex">
       <button
-          class="flex gap-2"
+          class="flex gap-2 text-lg font-medium tracking-wide justify-center items-center"
           @click="firstDropDownOpen = !firstDropDownOpen; secondDropDownOpen = false"
       >
         О нас
         <ChevronDown
-            class="transition-transform duration-200"
+            class="transition-transform duration-200 scale-150"
             :class="{ 'rotate-180': firstDropDownOpen }"
         />
       </button>
       <button
-          class="flex gap-2"
+          class="flex gap-2 text-lg font-medium tracking-wide justify-center items-center"
           @click="secondDropDownOpen = !secondDropDownOpen; firstDropDownOpen = false"
       >
         О пищевых отходах
         <ChevronDown
-            class="transition-transform duration-200"
+            class="transition-transform duration-200 scale-150"
             :class="{ 'rotate-180': secondDropDownOpen }"
         />
       </button>
