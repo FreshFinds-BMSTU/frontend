@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { CircleCheckBig, Clock8, Salad, DiamondPercent } from 'lucide-vue-next';
 import PartnerCarousel from '@/components/PartnerCarousel.vue';
+import Header1 from '@/components/Header1.vue'
 
 </script>
 
 <template>
+  <header>
+    <Header1></Header1>
+  </header>
   <div class = "flex flex-col items-center w-full py-10 gap-8 px-4">
     <p class="text-white font-medium text-2xl">Добро пожаловать в Fresh Finds! Мы стремимся сделать мир лучше, уменьшая количество пищевых отходов и помогая вам находить свежие продукты по доступным ценам. Присоединяйтесь к нашему сообществу и откройте для себя вкусные находки рядом с вами!</p>
   </div>
@@ -48,6 +52,7 @@ import PartnerCarousel from '@/components/PartnerCarousel.vue';
    <div class="flex flex-col items-center w-full py-10 gap-8">
      <h1 class="text-white text-3xl font-bold">Наши партнеры</h1>
     <PartnerCarousel />
+      <nuxt-link to="/client">Причины пищевых отходов</nuxt-link>
   </div>
 </template>
 
