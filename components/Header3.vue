@@ -4,7 +4,7 @@
       <div class="relative">
         <button
           class="flex gap-2 text-lg font-medium tracking-wide justify-center items-center"
-          @click="firstDropDownOpen = !firstDropDownOpen; secondDropDownOpen = false; thirdDropDownOpen = false"
+          @click="firstDropDownOpen = !firstDropDownOpen; secondDropDownOpen = false;"
         >
           О нас
           <ChevronDown
@@ -26,7 +26,7 @@
       <div class="relative">
         <button
           class="flex gap-2 text-lg font-medium tracking-wide justify-center items-center"
-          @click="secondDropDownOpen = !secondDropDownOpen; firstDropDownOpen = false; thirdDropDownOpen = false"
+          @click="secondDropDownOpen = !secondDropDownOpen; firstDropDownOpen = false;"
         >
           О пищевых отходах
           <ChevronDown
@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    <a href="/client" class="relative left-1/2 transform -translate-x-1/2">
+    <a href="" class="relative left-1/2 transform -translate-x-1/2">
       <h2 class="text-2xl font-semibold">[Логотип]</h2>
     </a>
 
@@ -55,23 +55,11 @@
         src="https://i.pinimg.com/originals/1f/28/c6/1f28c68d2c35f389966b5a363b992d06.png"
         alt="User Avatar"
         class="cursor-pointer w-10 h-10 rounded-full"
-        @click="thirdDropDownOpen = !thirdDropDownOpen; firstDropDownOpen = false; secondDropDownOpen = false"
       />
-      <div v-if="thirdDropDownOpen" class="absolute right-0 mt-1 w-48 bg-white text-black rounded shadow-lg z-10">
-        <ul>
-          <li class="px-4 py-2 hover:bg-gray-200">
-            <nuxt-link to="/orderhistory">История заказов</nuxt-link>
-          </li>
-          <li class="px-4 py-2 hover:bg-gray-200">
-            <nuxt-link to="/cart">Корзина</nuxt-link>
-          </li>
-        </ul>
-      </div>
-    </div>
-
     <div class="md:hidden">
       <Menu />
     </div>
+  </div>
   </div>
 </template>
 
@@ -81,7 +69,7 @@ import { ChevronDown, Menu } from "lucide-vue-next";
 
 const firstDropDownOpen = ref(false);
 const secondDropDownOpen = ref(false);
-const thirdDropDownOpen = ref(false);
+
 </script>
 
 <style scoped>

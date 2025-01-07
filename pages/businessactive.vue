@@ -1,15 +1,14 @@
 <template>
-  <div class="flex items-center justify-center min-h-screen">
-    <div class="w-[1200px] min-h-[800px] p-10">
-      <header class="flex justify-between items-center mb-8">
-        <h1 class="font-title text-3xl text-neutral-50">Управление пакетами акций</h1>
+      <header>
+        <Header3></Header3>
       </header>
       <main>
-        <section class="grid gap-6 mb-8">
+        <h1 class="font-title text-3xl text-neutral-50 p-3">Управление пакетами продуктов</h1>
+        <section class="grid gap-6 mb-8 p-3">
           <article class="flex justify-between items-center p-4 bg-neutral-700 rounded-md">
-            <div>
-              <h2 class="text-lg font-medium text-neutral-50">Пакет акций #1</h2>
-              <p class="text-sm text-neutral-400">Детали о пакете акций №1</p>
+            <div class>
+              <h2 class="text-lg font-medium text-neutral-50">Пакет товаров #1</h2>
+              <p class="text-sm text-neutral-400">Детали о пакете товаров №1</p>
             </div>
             <div class="flex gap-4">
               <button class="bg-green-500 text-primary-50 rounded-md px-4 py-2">Редактировать</button>
@@ -18,8 +17,8 @@
           </article>
           <article class="flex justify-between items-center p-4 bg-neutral-700 rounded-md">
             <div>
-              <h2 class="text-lg font-medium text-neutral-50">Пакет акций #2</h2>
-              <p class="text-sm text-neutral-400">Детали о пакете акций №2</p>
+              <h2 class="text-lg font-medium text-neutral-50">Пакет товаров #2</h2>
+              <p class="text-sm text-neutral-400">Детали о пакете товаров №2</p>
             </div>
             <div class="flex gap-4">
               <button class="bg-green-500 text-primary-50 rounded-md px-4 py-2">Редактировать</button>
@@ -27,8 +26,9 @@
             </div>
           </article>
         </section>
-        <details class="bg-neutral-700 p-4 rounded-md">
-          <summary class="text-neutral-50 cursor-pointer">Создать новый пакет акций</summary>
+      <div class = "flex flex-col gap-3 px-3">
+        <details class="bg-neutral-700 p-5 rounded-md">
+          <summary class="text-neutral-50 cursor-pointer">Создать новый пакет товаров</summary>
           <form @submit.prevent="addPackage" class="mt-4 grid gap-4">
             <input
               v-model="newPackage.name"
@@ -54,9 +54,11 @@
             <button class="bg-green-500 text-primary-50 rounded-md px-6 py-2 self-start">Сохранить</button>
           </form>
         </details>
+        <div class = "flex justify-end">
+          <nuxt-link to="/business" class="py-4"><button class="bg-green-500 text-primary-50 rounded-md px-6 py-2 self-start">Назад</button></nuxt-link>
+        </div>
+        </div>
       </main>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -72,16 +74,15 @@ export default {
   },
   methods: {
     addPackage() {
-      // Здесь вы можете добавить логику для сохранения нового пакета акций
-      console.log('Новый пакет акций:', this.newPackage);
+      console.log('Новый пакет товаров:', this.newPackage);
 
-      // Очистка формы после добавления
       this.newPackage.name = '';
       this.newPackage.description = '';
       this.newPackage.price = null;
     },
   },
 };
+import Header3 from "~/components/Header3.vue";
 </script>
 
 <style scoped>

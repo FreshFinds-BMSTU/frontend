@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    <a href="/client" class="relative left-1/2 transform -translate-x-1/2">
+    <a href="/business" class="relative left-1/2 transform -translate-x-1/2">
       <h2 class="text-2xl font-semibold">[Логотип]</h2>
     </a>
 
@@ -60,10 +60,10 @@
       <div v-if="thirdDropDownOpen" class="absolute right-0 mt-1 w-48 bg-white text-black rounded shadow-lg z-10">
         <ul>
           <li class="px-4 py-2 hover:bg-gray-200">
-            <nuxt-link to="/orderhistory">История заказов</nuxt-link>
+            <nuxt-link to="/rating">Отзывы</nuxt-link>
           </li>
           <li class="px-4 py-2 hover:bg-gray-200">
-            <nuxt-link to="/cart">Корзина</nuxt-link>
+            <nuxt-link to="/stat">Статистика</nuxt-link>
           </li>
         </ul>
       </div>

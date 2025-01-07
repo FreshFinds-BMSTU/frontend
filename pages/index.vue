@@ -9,8 +9,8 @@ import Header1 from '@/components/Header1.vue'
   <header>
     <Header1></Header1>
   </header>
-  <div class = "flex flex-col items-center w-full py-10 gap-8 px-4">
-    <p class="text-white font-medium text-2xl">Добро пожаловать в Fresh Finds! Мы стремимся сделать мир лучше, уменьшая количество пищевых отходов и помогая вам находить свежие продукты по доступным ценам. Присоединяйтесь к нашему сообществу и откройте для себя вкусные находки рядом с вами!</p>
+  <div class = "flex flex-col py-12 w-full items-center px-40 justified-text">
+    <p class="text-white font-medium text-2xl ">Добро пожаловать в Fresh Finds! Мы стремимся сделать мир лучше, уменьшая количество пищевых отходов и помогая вам находить свежие продукты по доступным ценам. Присоединяйтесь к нашему сообществу и откройте для себя вкусные находки рядом с вами!</p>
   </div>
   <div class="flex flex-col items-center w-full py-10 gap-8">
       <h1 class="text-white text-4xl font-bold">Почему именно мы?</h1>
@@ -52,10 +52,11 @@ import Header1 from '@/components/Header1.vue'
    <div class="flex flex-col items-center w-full py-10 gap-8">
      <h1 class="text-white text-3xl font-bold">Наши партнеры</h1>
     <PartnerCarousel />
-      <nuxt-link to="/client">Причины пищевых отходов</nuxt-link>
   </div>
 </template>
 
 <style scoped>
-
+.justified-text {
+  text-align: justify; /* Выравнивание текста по ширине */
+}
 </style>

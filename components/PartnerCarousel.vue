@@ -19,6 +19,12 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/swiper-bundle.css';
 
+import partner1 from '~/static/logos/partner1.png';
+import partner2 from '~/static/logos/partner2.png';
+import partner3 from '~/static/logos/partner3.png';
+import partner4 from '~/static/logos/partner4.png';
+import partner5 from '~/static/logos/partner5.png';
+
 export default {
   components: {
     Swiper,
@@ -26,13 +32,12 @@ export default {
   },
   data() {
     return {
-      // Partners data defined here
       partners: [
-        { id: 1, name: 'Партнер 1', logo: '~/assets/logos/partner1.png'},
-        { id: 2, name: 'Партнер 2', logo: '~/assets/logos/partner2.png'},
-        { id: 3, name: 'Партнер 3', logo: '~/assets/logos/partner3.png'},
-        { id: 4, name: 'Партнер 4', logo: '~/assets/logos/partner4.png'},
-        { id: 5, name: 'Партнер 5', logo: '~/assets/logos/partner5.png'}
+        { id: 1, name: 'Партнер 1', logo: partner1 },
+        { id: 2, name: 'Партнер 2', logo: partner2 },
+        { id: 3, name: 'Партнер 3', logo: partner3 },
+        { id: 4, name: 'Партнер 4', logo: partner4 },
+       { id: 5, name: 'Партнер 5', logo: partner5 }
       ]
     };
   }
@@ -46,7 +51,7 @@ export default {
   box-sizing: border-box; /* Ensure padding is accounted for */
 }
 .partner-carousel img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   display: block; /* Improve image display consistency */
   margin: 0 auto; /* Center images if they are smaller */
