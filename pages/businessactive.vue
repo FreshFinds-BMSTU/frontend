@@ -37,10 +37,17 @@
               placeholder="Название пакета"
               required
             />
+            <input
+              v-model="newPackage.name"
+              class="border border-neutral-700 bg-neutral-800 text-neutral-50 rounded-md p-2"
+              type="text"
+              placeholder="Описание пакета"
+              required
+            />
             <textarea
               v-model="newPackage.description"
               class="border border-neutral-700 bg-neutral-800 text-neutral-50 rounded-md p-2"
-              placeholder="Описание пакета"
+              placeholder="Состав пакета"
               required
             ></textarea>
             <input
@@ -82,9 +89,7 @@ export default {
     },
   },
 };
-import Header3 from "~/components/Header3.vue";
 </script>
 
 <style scoped>
-/* Добавьте стили, если необходимо */
 </style>

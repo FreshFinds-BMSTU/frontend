@@ -60,7 +60,7 @@
       <div v-if="thirdDropDownOpen" class="absolute right-0 mt-1 w-48 bg-white text-black rounded shadow-lg z-10">
         <ul>
           <li class="px-4 py-2 hover:bg-gray-200">
-            <nuxt-link to="/orderhistory">История заказов</nuxt-link>
+            <nuxt-link to="/history">История заказов</nuxt-link>
           </li>
           <li class="px-4 py-2 hover:bg-gray-200">
             <nuxt-link to="/cart">Корзина</nuxt-link>
