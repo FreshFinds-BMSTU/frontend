@@ -3,19 +3,20 @@
     <header>
       <Header4></Header4>
     </header>
-    <main class="flex-grow p-4">
+    <main class="flex-grow px-6 py-4">
       <section class="mb-7">
         <h2 class="text-2xl font-semibold">Управление бизнесом</h2>
-        <p class ="py-2">Здесь вы можете управлять своими предложениями и просматривать статистику.</p>
+        <p class ="py-2">Здесь вы можете управлять своими предложениями.</p>
         <nuxt-link to="/businessactive" class="py-4"><button class="bg-green-500 text-black rounded-md px-6 py-2 self-start">Управлять бизнесом</button></nuxt-link>
-      </section>
-      <section class="mb-6">
-        <h2 class="text-2xl font-semibold">Отзывы</h2>
-        <p>Пользователи могут оставлять свои отзывы о вашем бизнесе.</p>
       </section>
       <section>
         <h2 class="text-2xl font-semibold">Контакты</h2>
         <p>Свяжитесь с нами для получения дополнительной информации.</p>
+      </section>
+      <section class="mb-7 py-7">
+        <h2 class="text-2xl font-semibold">Информация о бизнесе</h2>
+        <p class ="py-2">Здесь вы можете редактировать данные о вашей компании, их будет видеть клиент.</p>
+        <nuxt-link to="/businessinfo" class="py-4"><button class="bg-green-500 text-black rounded-md px-6 py-2 self-start">Информация о бизнесе</button></nuxt-link>
       </section>
     </main>
   </div>

@@ -60,10 +60,7 @@
       <div v-if="thirdDropDownOpen" class="absolute right-0 mt-1 w-48 bg-white text-black rounded shadow-lg z-10">
         <ul>
           <li class="px-4 py-2 hover:bg-gray-200">
-            <nuxt-link to="/rating">Отзывы</nuxt-link>
-          </li>
-          <li class="px-4 py-2 hover:bg-gray-200">
-            <nuxt-link to="/stat">Статистика</nuxt-link>
+            <nuxt-link to="/rating">Данные</nuxt-link>
           </li>
         </ul>
       </div>
