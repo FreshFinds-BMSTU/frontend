@@ -47,7 +47,7 @@
       </div>
     </div>
     <a href="/" class="relative left-1/2 transform -translate-x-1/2">
-      <h2 class="text-2xl font-semibold">[Логотип]</h2>
+      <img :src="logo" :alt="описание" class="w-18 h-12" />
     </a>
     <a class="px-8 py-1.5 bg-green-600 rounded-full hidden md:block" href="https://auth.spoverlay.ru/authorize">
       Войти
@@ -61,6 +61,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { ChevronDown, Menu } from "lucide-vue-next";
+import logo from "~/static/logos/logo.png";
 
 const firstDropDownOpen = ref(false);
 const secondDropDownOpen = ref(false);
