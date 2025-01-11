@@ -92,7 +92,7 @@
           />
           <div class="flex justify-end">
             <button @click="resetEditPackageForm" class="bg-red-500 text-white rounded-md px-4 py-2 mr-2">Отмена</button>
-            <button @click="updatePackage" type="submit" class="bg-green-500 text-primary-50 rounded-md px-4 py-2">Обновить</button>
+                        <button @click="updatePackage" type="submit" class="bg-green-500 text-primary-50 rounded-md px-4 py-2">Обновить</button>
           </div>
         </form>
       </div>
@@ -125,9 +125,20 @@ export default {
       isEditModalOpen: false, // Флаг для управления видимостью модального окна
     };
   },
+  mounted() {
+    this.loadPackages(); // Загружаем пакеты из localStorage при монтировании компонента
+  },
   methods: {
+    loadPackages() {
+      const storedPackages = localStorage.getItem('packages');
+      this.packages = storedPackages ? JSON.parse(storedPackages) : [];
+    },
+    savePackages() {
+      localStorage.setItem('packages', JSON.stringify(this.packages));
+    },
     addPackage() {
       this.packages.push({...this.newPackage});
+      this.savePackages(); // Сохраняем пакеты в localStorage
       this.resetNewPackageForm();
     },
     openEditModal(index) {
@@ -142,11 +153,13 @@ export default {
         content: this.editPackage.content,
         price: this.editPackage.price,
       };
+      this.savePackages(); // Сохраняем пакеты в localStorage
       this.isEditModalOpen = false; // Закрыть модальное окно
       this.editingIndex = null;
     },
     deletePackage(index) {
       this.packages.splice(index, 1);
+      this.savePackages(); // Сохраняем пакеты в localStorage
     },
     resetNewPackageForm() {
       this.newPackage = {
@@ -168,7 +181,6 @@ export default {
   },
 }
 </script>
-
 
 <style scoped>
 .fixed {
